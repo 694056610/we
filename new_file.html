@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title></title>
+		<style type="text/css">
+			*{
+				-webkit-box-sizing: border-box;
+			}
+			html,body{
+				margin: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.container{
+				width: 100%;
+				height: 300px;
+				overflow: hidden;
+				position: relative;
+			}
+			ul{
+				transition: all 200ms;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				width: 400%;
+				height: 300px;
+				position: absolute;
+			}
+			ul li{
+				width: 25%;
+				float: left;
+				background: lightcyan;
+			}
+			ul li img{
+				width: 100%;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<ul  id="list">
+				<li><img src="img/1.jpg"/></li>
+				<li><img src="img/2.jpg"/></li>
+				<li><img src="img/3.jpg"/></li>
+				<li><img src="img/4.jpg"/></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize=innerWidth/16+"px";
+			function getStyle(obj,attr){
+				return getComputedStyle(obj,null)[attr];
+			}
+			var list=document.getElementById("list");
+			var lis=document.getElementsByTagName("li");
+			var w=parseInt(getStyle(lis[0],"width"));
+			var oleft=0;
+			var n=0;//判断第几屏
+			list.addEventListener("touchstart",function(ev){
+				var ex=ev.changedTouches[0].pageX;//触摸点的位置X坐标
+				
+				ev.preventDefault();//阻止默认行为
+				oleft=this.offsetLeft;//ul(list)距离屏幕左边的距离
+//				console.log(ev.changedTouches[0].pageX,ex)
+				
+				list.addEventListener("touchmove",function(ev){
+					var dis=ev.changedTouches[0].pageX-ex;//移动的触摸点减去原本start的触摸点  得到手势方向和距离
+//					console.log(ev.changedTouches[0].pageX,dis)
+					
+					list.style.left=oleft+dis+"px";//ul和屏幕的距离加上手动(触摸点)动的距离
+				})
+				list.addEventListener("touchend",function(ev){
+					n=Math.round(this.offsetLeft/w);
+//					console.log(n,w,this.offsetLeft/w)
+					if(n>0){
+						n=0;
+					}else if(n<-(lis.length-1)){
+						n=-(lis.length-1);
+					}
+					list.style.left=n*w+"px";
+				})
+			})
+		</script>
+	</body>
+</html>
