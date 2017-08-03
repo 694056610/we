@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 100px;
+				height: 100px;
+				background: cyan;
+				opacity: .9;
+				position: absolute;
+				top: 0;
+			}
+			.box2{
+				width: 100px;
+				height: 100px;
+				background: red;
+				opacity: .9;
+				position: absolute;
+				top: 0;
+				left: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="https://www.baidu.com/">baidu</a>
+		<div class="box" id="box"></div>
+		<div class="box2" id="box2"></div>
+		<script type="text/javascript">
+			var box=document.getElementById("box");
+			var box2=document.getElementById("box2");
+			box.addEventListener("touchstart",function(ev){
+					console.log("touchstart");
+					ev.preventDefault();//阻止默认行为
+					
+			},false)
+			box2.addEventListener("touchstart",function(ev){
+				box2.innerHTML=ev.targetTouches.length;//测试触摸目标的触摸点
+			})
+			document.addEventListener("touchstart",function(ev){
+				box.innerHTML=ev.touches.length;//测试有几个触摸点
+			})
+			document.addEventListener("touchmove",function(){
+				console.log("touchmove")
+			})
+			document.addEventListener("touchend",function(){
+				console.log("touchend")
+			})
+			box.addEventListener("touchend",function(){
+				box.style.display="none";
+			})
+			/*document.addEventListener("touchstart",function(ev){
+				ev.preventDefault();//阻止默认行为
+				ev.touches.length;//触摸点
+				ev.targetTouches.length;//目标触摸点
+				ev.changeTouches,length;//移动的触摸点
+			})*/
+		</script>
+	</body>
+</html>
