@@ -21,7 +21,7 @@
 				position: relative;
 			}
 			ul{
-				transition:all 100ms;
+				
 				margin: 0;
 				padding: 0;
 				list-style: none;
@@ -60,6 +60,7 @@
 			var oleft=0;
 			var n=0;//判断第几屏
 			list.addEventListener("touchstart",function(ev){
+				list.style.webkitTransition="none";
 				var ex=ev.changedTouches[0].pageX;//触摸点的位置X坐标
 				
 				ev.preventDefault();//阻止默认行为
@@ -73,6 +74,7 @@
 					list.style.left=oleft+dis+"px";//ul和屏幕的距离加上手动(触摸点)动的距离
 				})
 				list.addEventListener("touchend",function(ev){
+					list.style.webkitTransition="all 300ms";
 					n=Math.round(this.offsetLeft/w);
 //					console.log(n,w,this.offsetLeft/w)
 					if(n>0){
