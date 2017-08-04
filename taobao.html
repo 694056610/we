@@ -72,15 +72,11 @@
     </div>
     
 </body>
-<script type="text/javascript" charset="utf-8">
-     var mySwiper=new Swiper(".banner",{
-    autoplay:2000,//自动轮播
-    // direction:"vertical", //纵向轮播
-    loop:true,  //无缝轮播
-    pagination:".swiper-pagination",//分页器
-    autoplayDisableOnInteraction : false,//用户自动切换不会停止 每次都会重新启动
-
- })
-
+<script src="js/taobao.js" type="text/javascript" charset="utf-8">
+</script>
+<script>
+    (window.onresize=function(){
+        document.documentElement.style.fontSize=innerWidth/16+"px";
+    })();
 </script>
 </html>
