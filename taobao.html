@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="css/taobao.css" />
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+    <!-- <script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script> -->
+    
+    <script src="js/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- <script src="js/taobao.js" type="text/javascript" charset="utf-8"></script> -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span><i class="iconfont">&#xe60f;</i></span>
+            <div class="search"><input type="text" placeholder="寻找宝贝店铺"/><i class="iconfont">&#xe60c;</i></div>
+        </header>
+
+        <section>
+            <div class="banner" id="box">
+                <ul id="ul" class="swiper-wrapper">
+                    <li class="swiper-slide"><img src="img2/banner1.jpg" alt="1" /></li>
+                    <li class="swiper-slide"><img src="img2/banner2.jpg" alt="2" /></li>
+                    <li class="swiper-slide"><img src="img2/banner3.jpg" alt="3" /></li>
+                    <li class="swiper-slide"><img src="img2/banner4.jpg" alt="4" /></li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><img src="img2/nav_01.png" alt="1"><span>天猫</span></li>
+                    <li><img src="img2/nav_02.png" alt="1"><span>聚划算</span></li>
+                    <li><img src="img2/nav_03.png" alt="1"><span>天猫国际</span></li>
+                    <li><img src="img2/nav_04.png" alt="1"><span>外卖</span></li>
+                    <li><img src="img2/nav_05.png" alt="1"><span>天猫超市</span></li>
+                    <li><img src="img2/nav_06.png" alt="1"><span>充值中心</span></li>
+                    <li><img src="img2/nav_07.png" alt="1"><span>飞猪旅行</span></li>
+                    <li><img src="img2/nav_08.png" alt="1"><span>领金币</span></li>
+                    <li><img src="img2/nav_09.png" alt="1"><span>拍卖</span></li>
+                    <li><img src="img2/nav_10.png" alt="1"><span>分类</span></li>
+                </ul>
+            </div>
+            <div class="toutiao">
+                <span class="toutiao_left"></span>
+                
+                    <span>最新</span>
+                    <span>一片好的蚕丝面膜比你贴十根</span>
+                
+            </div>
+            <div class="tqg">
+                <div class="tqg_left"><img src="img2/hot_panel01.jpg" alt="1" /></div>
+                <div class="tqg_right">
+                    <div><img src="img2/hot_panel02.png" alt="2" /></div>
+                    <div><img src="img2/hot_panel03.jpg" alt="3" /></div>
+                    <div><img src="img2/hot_panel04.png" alt="4" /></div>
+                </div>
+                
+            </div>
+        </section>
+
+        <footer>
+            <ul>
+                <li><i class="iconfont">&#xe63a;</i><span>首页</span></li>
+                <li><i class="iconfont">&#xe668;</i><span>物流</span></li>
+                <li><i class="iconfont">&#xe601;</i><span>购物车</span></li>
+                <li><i class="iconfont">&#xe61d;</i><span>我的淘宝</span></li>
+                <li><i class="iconfont">&#xe602;</i><span>更多</span></li>
+            </ul>
+        </footer>
+    </div>
+    
+</body>
+<script type="text/javascript" charset="utf-8">
+     var mySwiper=new Swiper(".banner",{
+    autoplay:2000,//自动轮播
+    // direction:"vertical", //纵向轮播
+    loop:true,  //无缝轮播
+    pagination:".swiper-pagination",//分页器
+    autoplayDisableOnInteraction : false,//用户自动切换不会停止 每次都会重新启动
+
+ })
+
+</script>
+</html>
