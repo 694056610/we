@@ -1,0 +1,304 @@
+%hf{
+    width:100%;
+    height:2rem;
+}
+$size:20;
+@font-face {font-family: 'iconfont';
+    src: url('../iconfont/font/iconfont.eot');
+    src: url('../iconfont/font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../iconfont/font/iconfont.woff') format('woff'),
+    url('../iconfont/font/iconfont.ttf') format('truetype'),
+    url('iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+*{
+    margin:0;
+    padding: 0;
+    -webkit-box-sizing:border-box;
+}
+body,html{
+    width:100%;
+    height: 100%;
+
+}
+ul,ol{
+    list-style: none;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+color: #fff; 
+} 
+input:-moz-placeholder, textarea:-moz-placeholder { 
+color: #fff; 
+} 
+input::-moz-placeholder, textarea::-moz-placeholder { 
+color: #fff; 
+} 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+color: #fff; 
+}
+.container{
+    overflow:hidden;
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+    header{
+        @extend %hf;
+        background:#fe5400;
+        padding:2/$size+rem;
+        position:relative;
+        span{
+            display:inline-block;
+            width:14%;
+            height:40/$size+rem;
+             i{
+            color:#fff;
+            font-size: 35/$size+rem;
+            line-height: 40/$size+rem;
+            
+            }
+        }
+        .search{
+            position: absolute;
+            top:4/$size+rem;
+           
+            display:inline-block;
+            width:80%;
+            height: 30/$size+rem;
+            i{
+                font-size: 20/$size+rem;
+                color:#fff;
+                position:absolute;
+                left:26%;
+                top:6/$size+rem;
+
+            }
+            input{
+            background:#b52600;
+            width:100%;
+            height: 30/$size+rem;
+            border-radius: 5px;
+            text-align: center;
+            border:none;
+        }
+        }
+       
+       
+    }
+
+    section{
+        overflow:auto;
+        flex:1;
+        background: #ccc;
+        .banner{
+
+            width: 100%;
+            height:100/$size+rem;
+            position:relative;
+            overflow:hidden;
+            ul{
+                width: 500%;
+                height: 100/$size+rem;
+                position:absolute;
+                li{
+                    width: 20%;
+                    float: left;
+                    img{
+                        width: 100%;
+                        height: 100/$size+rem;
+                    }
+                }
+            }
+            ol{
+                position: absolute;
+                right: 10/$size+rem;
+                bottom: 5/$size+rem;
+                li{
+                    width: 10/$size+rem;
+                    height: 10/$size+rem;
+                    background: #fff;
+                    border:1px solid #ccc;
+                    border-radius: 100%;
+                    float:left;
+                    margin-left: 10/$size+rem;
+                }
+            }
+            ol li.current{
+                background: #fe5400!important;
+            }
+        }
+        .nav{
+            background: #fff;
+
+            width: 100%;
+            height: 147/$size+rem;
+            display: flex;
+            padding:5/$size+rem;
+            
+            ul{
+                display: flex;
+                flex:1;
+                flex-wrap: wrap;
+                li{
+                    align-items: center;
+                    width:100%;
+                    display: flex;
+                    flex:1;
+                    flex-direction: column;
+                    text-align: center;
+                    img{
+                        width:52/$size+rem;
+                        height:36/$size+rem;
+                    }
+                    span{
+                        color:#666;
+                        margin-top: 5/$size+rem;
+                        width: 52/$size+rem;
+                        height: 18/$size+rem;
+                        font-size: 12/$size+rem;
+                    }
+                }
+            }
+
+        }
+        .toutiao{
+            background: #fff;
+            width: 100%;
+            height: 30/$size+rem;
+            padding:5/$size+rem 0px;
+            span:nth-child(1){
+                background:url(../img2/taobao_hbar.png) center center /3rem 0.9rem no-repeat;
+                display: inline-block;
+                width: 70/$size+rem;
+                height: 100%;
+                border-right: 1px solid #ccc;
+                
+            }
+            span:nth-child(2){
+                display:inline-block;
+                margin:0.125rem 0.15625rem 0.125rem 0.28125rem;
+                padding: 0px 0.0625rem;
+                height: 17/$size+rem;
+                line-height: 17/$size+rem;
+                border: 1px solid rgb(216, 20, 33);
+                border-radius: 0.125rem;
+                color: rgb(216, 20, 33);
+                font-size: 14px;
+                text-align: center;
+                overflow: hidden;
+                max-width: 34/$size+rem;;
+            }
+            span:nth-child(3){
+                display: inline-block;
+                overflow: hidden;
+                margin:0.125rem 0px;
+                height: 16/$size+rem;
+                width: 180/$size+rem;
+                line-height: 16/$size+rem;
+                font-size: 15px;
+                flex:1 1 0%;
+            }
+            
+        }
+        .tqg{
+            width: 100%;
+            height: 162/$size+rem;
+            position: relative;
+            overflow: hidden;
+            background: #fff;
+            margin-top: 10/$size+rem;
+            display: flex;
+            flex:1;
+            padding:0;
+            .tqg_left{
+                width: 132/$size+rem;
+                height: 160/$size+rem;
+                border-right: 1px solid #ccc;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+             .tqg_right{
+                display: flex;
+                flex: 1;
+                flex-wrap: wrap;
+                width: 196/$size+rem;
+                height: 100%;
+                overflow: hidden;
+                div:nth-child(1){
+                    width: 100%;
+                    height: 74/$size+rem;
+                    border-bottom: 1px solid #ccc;
+                    img{
+                        width:100%;
+                        height: 100%;
+                    }
+                }
+                div:nth-child(2){
+                    width: 97.5/$size+rem;
+                    height: 85.75/$size+rem;
+                    border-right: 1px solid #ccc;
+                    img{
+                        width:100%;
+                        height: 100%;
+                    }
+                }
+                div:nth-child(3){
+
+                    width: 90.5/$size+rem;
+                    height: 85.75/$size+rem;
+                    
+                    img{
+                        width:100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    footer{
+        width:100%;
+        height: 45/$size+rem;
+        background:#fff;
+        border-top: 1px solid #ccc;
+        display:flex;
+        ul{
+            list-style: none;
+            display:flex;
+            flex:1;
+            li{
+                width:100%;
+                color: #666;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                text-align: center;
+                padding-top: 2/$size+rem;
+                i{
+                    width: 100%;
+                    height: 24/$size+rem;
+                    line-height: 24/$size+rem;
+                    font-size: 20/$size+rem;
+                }
+                span{
+                    width: 100%;
+                    height: 18/$size+rem;
+                    font-size: 14/$size+rem;
+                }
+            }
+        }
+    }
+
+
+}

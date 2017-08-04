@@ -1,0 +1,264 @@
+$size:20;
+$color:#00b38a;
+$border:1px solid #ccc;
+@mixin zi(){
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow: hidden;
+}
+@mixin br($r:5px){
+    border-radius: $r;
+}
+%floatleft{
+    float: left;
+}
+%floatright{
+    float: right;
+}
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 40/$size+rem;
+    background:$color;
+    font-size: 18/$size+rem;
+    color:#fff;
+    text-align: center;
+    line-height: 40/$size+rem;
+}
+.dingwei{
+    border-bottom: 1px solid #ccc;
+    /*width: 100%;*/
+    height: 40/$size+rem;
+    line-height: 40/$size+rem;
+    padding-left: 20/$size+rem;
+    padding-right:20/$size+rem;
+    position: relative;
+    overflow: auto;
+
+    p{
+        font-size: 14/$size+rem;
+        color: #666;
+        display: inline-block;
+    }
+    span{
+         width: 80/$size+rem;
+         height: 30/$size+rem;
+         line-height: 30/$size+rem;
+         background: #f5f5f5;
+         @include br(20px);
+         text-align: center;
+         color: $color;
+         font-size: 16/$size+rem;
+         display: inline-block;
+         @extend %floatright;
+         margin-top: 5/$size+rem;
+         /*position: absolute;
+         right: 20/$size+rem;*/
+    }
+}
+section{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    ul{
+        list-style: none;
+        height: 100%;
+        overflow: auto;
+        li{
+            width: 100%;
+            height: 92/$size+rem;
+            border-bottom: $border;
+            padding:10/$size+rem 20/$size+rem;
+            box-sizing: border-box;
+            position: relative;
+            img{
+                width: 70/$size+rem;
+                height: 70/$size+rem;
+                display: inline-block;
+            }
+            h1{
+                font-size: 20/$size+rem;
+                position: absolute;
+                top: 10/$size+rem;
+                left: 100/$size+rem;
+            }
+            h4{
+                padding-right: 20/$size+rem;
+                width: 35%;
+                position: absolute;
+                font-size: 14/$size+rem;
+                color: #666;
+                top: 40/$size+rem;
+                left: 100/$size+rem;
+                font-weight: 100;
+                @include zi();
+            }
+            h6{
+                font-size: 12/$size+rem;
+                position: absolute;
+                top: 65/$size+rem;
+                left:100/$size+rem;
+                font-weight: 100;
+                color: #999;
+            }
+            span{
+                @extend %floatright;
+                color: $color;
+                margin-top: 30/$size+rem;
+                font-size: 18/$size+rem;
+                 font-weight: 500;
+            }
+
+        }
+    }
+    .more{
+        text-align: center;
+        div:nth-child(1){
+            width:100%;
+            height: 40/$size+rem;
+            background: #FAFAFA;
+            line-height: 40/$size+rem;
+            font-size: 16/$size+rem;
+            color: #333;
+        }
+         div:nth-child(2){
+            width:100%;
+            height: 50/$size+rem;
+            background: #fff;
+            line-height: 50/$size+rem;
+            font-size: 12/$size+rem;
+            color: #333;
+            margin-bottom: 100/$size+rem;
+        }
+    }
+}
+    .btm{
+        display: block;
+        padding: 10/$size+rem 10/$size+rem;;
+        position: fixed;
+        bottom: 40/$size+rem;
+        background: #000;
+        opacity: .8;
+        width: 100%;
+        height: 60/$size+rem;
+         box-sizing: border-box;
+        
+        .lagou2{
+            width: 50/$size+rem;
+            height: 50/$size+rem;
+            z-index: 100;
+            position: absolute;
+            top: -24/$size+rem;
+        }
+        .lagou{
+            width: 40/$size+rem;
+            height: 40/$size+rem;
+            position: absolute;
+        }
+        h1{
+            font-size:  24/$size+rem;
+            position: absolute;
+            top: 12/$size+rem;
+            left: 60/$size+rem;
+            color: #fff;
+        }
+        h4{
+            font-size: 14/$size+rem;
+            font-weight: 100;
+            color:#fff;
+            position: absolute;
+            top: 11.5/$size+rem;
+            left: 110/$size+rem;
+        }
+        h6{
+            font-size: 12/$size+rem;
+            font-weight: 100;
+            color:#fff;
+            position: absolute;
+            top: 30/$size+rem;
+            left: 110/$size+rem;
+        }
+        .xiazai{
+            width: 80/$size+rem;
+            height: 30/$size+rem;
+            position: absolute;
+            top: 15/$size+rem;
+            right: 5/$size+rem;
+        }
+        .cha{
+            width: 25/$size+rem;
+            height:25/$size+rem;
+            position: absolute;
+            right: 5/$size+rem;
+            top: -17/$size+rem;
+        }
+    }
+ 
+footer{
+    position:fixed;
+    width: 100%;
+    height: 40/$size+rem;
+    bottom: 0;
+    background: #f6f6f6;
+    ul{
+        list-style:none;
+        li:first-child{
+            background:#e7f3f0;
+            h5{
+                color:$color;
+            }
+        }
+        li{
+            @extend %floatleft;
+            width: 33.33%;
+            line-height: 40/$size+rem;
+            font-size: 20/$size+rem;
+            position: relative;
+            span{
+                width: 25/$size+rem;
+                height: 24/$size+rem;
+                display: inline-block;
+                margin-top: 0.4rem;
+                margin-left: 1.5rem;
+                background: url(../img1/icon2.png) no-repeat;
+                background-size: 15rem;
+             }
+             &:nth-child(1) span{
+                background-position: -36/$size+rem -22/$size+rem;
+
+             }
+              &:nth-child(2) span{
+                background-position: -14/$size+rem 0/$size+rem;
+
+             }
+              &:nth-child(3) span{
+                background-position: -62/$size+rem 0/$size+rem;
+
+             }
+             h5{
+                display: inline-block;
+                font-size: 16/$size+rem;
+                font-weight: 100;
+                position: absolute;
+                top: .1rem;
+              
+             }
+             
+
+
+        }
+    }
+    
+}
+
+
+
