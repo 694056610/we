@@ -87,6 +87,7 @@ color: #fff;
             border-radius: 5px;
             text-align: center;
             border:none;
+            font-size: 14/$size+rem;
         }
         }
        
@@ -138,7 +139,7 @@ color: #fff;
             background: #fff;
 
             width: 100%;
-            height: 147/$size+rem;
+            
             display: flex;
             padding:5/$size+rem;
             
@@ -150,17 +151,17 @@ color: #fff;
                     align-items: center;
                     width:100%;
                     display: flex;
-                    flex:1;
+                    flex:1 1 20%;
                     flex-direction: column;
                     text-align: center;
                     img{
-                        width:52/$size+rem;
-                        height:36/$size+rem;
+                        width:70%;
+                        
                     }
                     span{
                         color:#666;
                         margin-top: 5/$size+rem;
-                        width: 52/$size+rem;
+                       
                         height: 18/$size+rem;
                         font-size: 12/$size+rem;
                     }
@@ -169,6 +170,7 @@ color: #fff;
 
         }
         .toutiao{
+            display:block;
             background: #fff;
             width: 100%;
             height: 30/$size+rem;
@@ -176,21 +178,21 @@ color: #fff;
             span:nth-child(1){
                 background:url(../img2/taobao_hbar.png) center center /3rem 0.9rem no-repeat;
                 display: inline-block;
-                width: 70/$size+rem;
+                width: 20%;
                 height: 100%;
                 border-right: 1px solid #ccc;
                 
             }
             span:nth-child(2){
                 display:inline-block;
-                margin:0.125rem 0.15625rem 0.125rem 0.28125rem;
-                padding: 0px 0.0625rem;
+                /* margin:0.125rem 0.15625rem 0.125rem 0.28125rem; */
+                /* padding: 0px 0.0625rem; */
                 height: 17/$size+rem;
                 line-height: 17/$size+rem;
                 border: 1px solid rgb(216, 20, 33);
                 border-radius: 0.125rem;
                 color: rgb(216, 20, 33);
-                font-size: 14px;
+                font-size: 12/$size+rem;
                 text-align: center;
                 overflow: hidden;
                 max-width: 34/$size+rem;;
@@ -200,16 +202,16 @@ color: #fff;
                 overflow: hidden;
                 margin:0.125rem 0px;
                 height: 16/$size+rem;
-                width: 180/$size+rem;
+                width: 65%;
                 line-height: 16/$size+rem;
-                font-size: 15px;
-                flex:1 1 0%;
+                font-size: 14/$size+rem;
+                text-align: center;
             }
             
         }
         .tqg{
             width: 100%;
-            height: 162/$size+rem;
+            
             position: relative;
             overflow: hidden;
             background: #fff;
@@ -218,7 +220,7 @@ color: #fff;
             flex:1;
             padding:0;
             .tqg_left{
-                width: 132/$size+rem;
+                width:33%;
                 height: 160/$size+rem;
                 border-right: 1px solid #ccc;
                 overflow: hidden;
@@ -231,7 +233,7 @@ color: #fff;
                 display: flex;
                 flex: 1;
                 flex-wrap: wrap;
-                width: 196/$size+rem;
+                width: 66%;
                 height: 100%;
                 overflow: hidden;
                 div:nth-child(1){
@@ -244,7 +246,7 @@ color: #fff;
                     }
                 }
                 div:nth-child(2){
-                    width: 97.5/$size+rem;
+                    width: 50%;
                     height: 85.75/$size+rem;
                     border-right: 1px solid #ccc;
                     img{
@@ -254,7 +256,7 @@ color: #fff;
                 }
                 div:nth-child(3){
 
-                    width: 90.5/$size+rem;
+                    width: 50%;
                     height: 85.75/$size+rem;
                     
                     img{
